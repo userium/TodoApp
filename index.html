@@ -1,5 +1,4 @@
 <!doctype html>
-
 <html>
 <head>
 	 <meta charset="utf-8">
@@ -7,21 +6,22 @@
 	 <link rel="stylesheet" type="text/css" href="main.css">
 </head>
 <body>
-	<h1>Todos</h1>
+  	<div class="container">
+		<h1>Todos</h1>
 
-	<div>
-		<input id="addTodoInput" type="text" />
-		<button onclick="todoList.addTodos()">Add</button>
+		<div>
+			<input id="addTodoInput" type="text" />
+			<button onclick="todoList.addTodos()">Add</button>
+		</div>
+
+		<div>
+			<input id="deleteTodo" type="number" />
+			<button onclick="todoList.deleteTodo()">Delete todo</button>
+		</div>
+
+		<ul id="listOfTodos"></ul>
 	</div>
-
-	<div>
-		<input id="deleteTodo" type="number" />
-		<button onclick="todoList.deleteTodo()">Delete todo</button>
-	</div>
-
-	<ul id="listOfTodos"></ul>
 
 	<script type="text/javascript" src="todo.js"></script>
 </body>
-
 </html>

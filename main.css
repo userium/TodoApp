@@ -1,0 +1,36 @@
+.container {
+	text-align: center;
+}
+
+h1 {
+	text-transform: uppercase;
+	font-family: sans-serif;
+	font-weight: 400;
+}
+
+button {
+	font-size: 1.1em;
+	background: #fff;
+	border-radius: 3px;
+	border: 1px solid #888;
+}
+
+input#addTodoInput {
+	font-size: 1.1em;
+	font-family: sans-serif;
+	margin: 10px;
+}
+
+input#deleteTodo {
+	font-size: 1.1em;
+	font-family: sans-serif;
+	margin: 10px;
+	width: 40px;
+}
+
+#listOfTodos li {
+	list-style-type: none;
+	font-size: 1.2em;
+	font-family: sans-serif;
+	padding-bottom: 4px;
+}
