@@ -4,13 +4,20 @@
 <head>
 	 <meta charset="utf-8">
 	 <title>Nina's JavaScript Todo App</title>
-
+	 <link rel="stylesheet" type="text/css" href="main.css">
 </head>
 <body>
 	<h1>Todos</h1>
 
-	<input id="addTodoInput" type="text" />
-	<button onclick="todoList.addTodos()">Add</button>
+	<div>
+		<input id="addTodoInput" type="text" />
+		<button onclick="todoList.addTodos()">Add</button>
+	</div>
+
+	<div>
+		<input id="deleteTodo" type="number" />
+		<button onclick="todoList.deleteTodo()">Delete todo</button>
+	</div>
 
 	<ul id="listOfTodos"></ul>
 

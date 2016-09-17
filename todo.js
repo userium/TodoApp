@@ -1,4 +1,4 @@
-// Add and display todos
+// Add, delete and display todos
 var todoList = {
 	todo: [],
 	addTodos: function() {
@@ -20,5 +20,15 @@ var todoList = {
 			// add todo array item text inside the li element
 			listTodos.innerHTML = item;	
 		});
+	},
+	deleteTodo: function() {
+		// get todo item array position
+		var getPosition = document.getElementById("deleteTodo").value;
+		// remove item from todo array
+		this.todo.splice(getPosition, 1);
+		// empty list
+        document.getElementById("listOfTodos").innerHTML = '';
+        // display all todos from the todo array
+		this.displayTodos();
 	}
 }
