@@ -10,11 +10,10 @@ var todoList = {
         document.getElementById('listOfTodos').innerHTML = '';
         this.displayTodos();
         this.createDeleteButton();
-        
 	},
 	displayTodos: function() {
 
-		this.todo.forEach(function(item) {
+		for(var i = 0; i< this.todo.length; i++) {
 			// get Ul element
 			var UlElement = document.getElementById("listOfTodos");
 			// put Li element inside Ul
@@ -22,8 +21,10 @@ var todoList = {
 			UlElement.appendChild(listTodos);
 			// add todo array item text inside the li element
 			listTodos.className = 'listTodos';
-			listTodos.innerHTML = item;	
-		});
+			listTodos.id = i;
+			listTodos.innerHTML = this.todo[i];	
+		}
+
 	},
 	deleteTodo: function() {
 
@@ -44,5 +45,12 @@ var todoList = {
 		for(var i=0;i<addDeleteButton.length; i++) {
 			addDeleteButton[i].appendChild(deleteButton.cloneNode(true));
 		}
+	},
+	deleteTodos: function() {
+		for(var i = 0; i < this.todo.length; i++) {
+			var getTodos = document.getElementsByClassName('listTodos');
+			getTodos.id = i;
+		}
 	}
 }
+
