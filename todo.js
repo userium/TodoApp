@@ -45,12 +45,6 @@ var todoList = {
 		for(var i=0;i<addDeleteButton.length; i++) {
 			addDeleteButton[i].appendChild(deleteButton.cloneNode(true));
 		}
-	},
-	deleteTodos: function() {
-		for(var i = 0; i < this.todo.length; i++) {
-			var getTodos = document.getElementsByClassName('listTodos');
-			getTodos.id = i;
-		}
 	}
 }
 
