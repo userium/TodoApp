@@ -2,7 +2,6 @@
 var todoList = {
 	todo: [],
 	addTodos: function() {
-
         // get the value from the input field
         var todoText = document.getElementById("addTodoInput").value;
         // add todotext on todo's array
@@ -12,7 +11,6 @@ var todoList = {
         this.createDeleteButton();
 	},
 	displayTodos: function() {
-
 		for(var i = 0; i< this.todo.length; i++) {
 			// get Ul element
 			var UlElement = document.getElementById("listOfTodos");
@@ -27,7 +25,6 @@ var todoList = {
 
 	},
 	deleteTodo: function() {
-
 		// get todo item array position
 		var getPosition = document.getElementById("deleteTodo").value;
 		// remove item from todo array
@@ -38,6 +35,7 @@ var todoList = {
 		this.displayTodos();
 	},
 	createDeleteButton: function() {
+		// display delete button on each todo list item
 		var deleteButton = document.createElement('button');
 		deleteButton.textContent = "delete";
 		deleteButton.className = 'deleteButton';
@@ -45,6 +43,9 @@ var todoList = {
 		for(var i=0;i<addDeleteButton.length; i++) {
 			addDeleteButton[i].appendChild(deleteButton.cloneNode(true));
 		}
+	},
+	deleteTodos: function() {
+		// Make delete button work
 	}
 }
 
